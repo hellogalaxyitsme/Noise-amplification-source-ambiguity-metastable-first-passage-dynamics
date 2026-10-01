@@ -1,9 +1,5 @@
 # Noise amplification and source ambiguity in metastable first-passage dynamics
 
-Analysis code for the article *Noise amplification and source ambiguity in
-metastable first-passage dynamics* by Jasmeet Singh Bindra and Siddharth Panwar
-(Indian Institute of Technology Mandi).
-
 The code reproduces every numerical result of the article and its supplementary
 material:
 
