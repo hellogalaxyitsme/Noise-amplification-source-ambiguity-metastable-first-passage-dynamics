@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metastable-fpt"
+version = "1.0.0"
+description = "Analysis code for 'Noise amplification and source ambiguity in metastable first-passage dynamics'"
+readme = "README.md"
+authors = [
+    {name = "Jasmeet Singh Bindra"},
+    {name = "Siddharth Panwar"},
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
