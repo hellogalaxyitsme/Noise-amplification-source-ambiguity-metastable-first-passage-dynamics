@@ -5,14 +5,14 @@ For the one-dimensional gradient diffusion ``dX = -U'(X) dt + sqrt(2D) dW`` on
 
 * mean:        ``m = int_{x0}^b int_ell^y D^-1 exp(Phi(y,z)/D) dz dy``, with
   ``Phi(y, z) = U(y) - U(z)``;
-* elasticity:  ``s := -d log m / d log D = 1 + <Phi>_w / D``          (Lemma 4);
-* variance:    ``Var T = 2 m <tau(z, y)>_w``, ``tau(z, y) = m(z) - m(y)``  (Lemma 5);
+* elasticity:  ``s := -d log m / d log D = 1 + <Phi>_w / D``          (Lemma 2);
+* variance:    ``Var T = 2 m <tau(z, y)>_w``, ``tau(z, y) = m(z) - m(y)``  (Lemma 3);
 
 where ``w`` is the probability density ``D^-1 exp(Phi/D) / m`` on the triangle
 ``{x0 < y < b, ell < z < y}``. With ``L = sup |U'|``, ``tau_L = D / L^2`` and
 ``A = e^2 CV^2 m / (2 tau_L)``,
 
-    s <= 3 + log A  (A >= e),      s <= 3 + A/e  (A < e)          (Theorem 6).
+    s <= 3 + log A  (A >= e),      s <= 3 + A/e  (A < e)          (Theorem 2).
 
 Lemma and theorem numbers refer to the article. All integrals are evaluated with
 nested one-dimensional cumulative integrals in a locally shifted form, which
@@ -69,7 +69,7 @@ def weighted_barrier(
     n: int = 20001,
     check_fd: bool = True,
 ) -> ElasticityResult:
-    """Mean, variance, elasticity ``s`` and the Theorem 6 bound by quadrature on ``n`` nodes.
+    """Mean, variance, elasticity ``s`` and the Theorem 2 bound by quadrature on ``n`` nodes.
 
     With ``check_fd=True`` the elasticity is also computed by a central finite
     difference of ``log m`` in ``log D`` (relative step ``1e-4``).
@@ -135,7 +135,7 @@ def weighted_barrier(
 
 
 def elasticity_bound(*, cv: float | Array, mean: float | Array, tau_L: float | Array) -> Array:
-    """Theorem 6 upper bound on the elasticity from an observed ``CV`` and mean ``m``."""
+    """Theorem 2 upper bound on the elasticity from an observed ``CV`` and mean ``m``."""
 
     cv = np.asarray(cv, dtype=float)
     mean = np.asarray(mean, dtype=float)
@@ -145,7 +145,7 @@ def elasticity_bound(*, cv: float | Array, mean: float | Array, tau_L: float | A
 
 
 def elasticity_bound_stages(*, cv: float, mean: float, tau_L: float, n_stages: int) -> float:
-    """Theorem 6 for ``k`` independent stages: the single-stage bound plus ``log k``."""
+    """Theorem 2 for ``k`` independent stages: the single-stage bound plus ``log k``."""
 
     if n_stages < 1:
         raise DomainError("n_stages must be >= 1")

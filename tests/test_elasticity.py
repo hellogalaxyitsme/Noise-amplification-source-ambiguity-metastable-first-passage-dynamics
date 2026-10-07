@@ -1,4 +1,4 @@
-"""Lemma 4, Lemma 5 and Theorem 6 against finite differences, chain moments and closed forms."""
+"""Lemma 2, Lemma 3 and Theorem 2 against finite differences, chain moments and closed forms."""
 
 from __future__ import annotations
 

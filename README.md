@@ -1,7 +1,7 @@
 # Noise amplification and source ambiguity in metastable first-passage dynamics
 
-The code reproduces every numerical result of the article and its supplementary
-material:
+The code reproduces every numerical result of the article and its Supplemental
+Material:
 
 * commitment-time laws of killed continuous-time Markov chains that discretise a
   one-dimensional metastable diffusion driven by white, colored
@@ -66,8 +66,8 @@ accumulator fits; the results do not depend on it.
 | Analysis | Content | Run time (full settings) |
 |---|---|---|
 | `timing_equivalence` | Divergence between commitment-time laws under effective-diffusion, escape-rate and mean matching; the matched-control design; spatial grid refinement | about 30 s |
-| `identities_duality` | Lemmas 4 and 5, Theorem 6 on random potentials and for two stages, waiting-time versus transition-path information | about 40 s |
-| `human_waiting_times` | Waiting-time statistics, the Theorem 6 bound and accumulator fits for 17 participants | about 10 min |
+| `identities_duality` | Lemmas 2 and 3, Theorem 2 on random potentials and for two stages, waiting-time versus transition-path information | about 40 s |
+| `human_waiting_times` | Waiting-time statistics, the Theorem 2 bound and accumulator fits for 17 participants | about 10 min |
 | `mc_effective_diffusion_controls` | Euler-Maruyama comparison of the candidate with controls matched in effective diffusion | about 2 min |
 | `mc_escape_matched_controls` | Euler-Maruyama comparison with escape-matched and mean-matched white controls at two time steps | about 7 min |
 
@@ -88,9 +88,9 @@ Run times were measured on a 28-thread workstation, with 20 processes for the ac
 | Table S2 | `timing_equivalence` | `grid_convergence` |
 
 Lemma and theorem numbers in the code refer to the article: Lemma 1 (hazard
-identity), Theorem 2 (rate-transient decomposition), Corollary 3 (escape-rate
-equivalence), Lemmas 4 and 5 (elasticity and variance identities), Theorem 6
-(variability-amplification inequality) and Theorem 7 (duality).
+identity), Theorem 1 (rate-transient decomposition), Corollary 1 (escape-rate
+equivalence), Lemmas 2 and 3 (elasticity and variance identities), Theorem 2
+(variability-amplification inequality) and Theorem 3 (duality).
 
 Model time is in units in which `U''(-1) = 2`; the article quotes these times in
 milliseconds. Human waiting times are in seconds.

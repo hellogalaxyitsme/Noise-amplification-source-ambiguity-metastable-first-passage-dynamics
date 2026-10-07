@@ -11,7 +11,7 @@ non-decision shift ``t_nd`` in ``[0, 0.98 min(T))`` is fitted.
 
 The waiting-time density is that of the Markov-chain discretisation
 (:mod:`metastable_fpt.timing_law`), so the likelihood carries no sampling error.
-The elasticity of a fitted model follows from Lemma 4
+The elasticity of a fitted model follows from Lemma 2
 (:func:`metastable_fpt.elasticity.weighted_barrier`).
 """
 

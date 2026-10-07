@@ -6,7 +6,7 @@ Uses only the header and marker files of the Libet-clock dataset (see
 * mean, standard deviation and coefficient of variation of the clock-start-to-press
   time ``T`` and of the free waiting time ``W = T - 2.56 s`` (``W > 0``), with
   bootstrap 95 % intervals, and the life-table hazard of ``T``;
-* the Theorem 6 bound on the elasticity ``s`` over a grid of the unobservable
+* the Theorem 2 bound on the elasticity ``s`` over a grid of the unobservable
   drift time ``tau_L``, from the point estimates and, conservatively, from the
   upper bootstrap limits of the CV and the mean;
 * a maximum-likelihood fit of the leaky accumulator to ``T`` and a profile

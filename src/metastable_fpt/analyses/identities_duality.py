@@ -2,18 +2,18 @@
 
 Four blocks:
 
-1. Identities. On ``U(x) = x^4/4 - x^2/2``, the elasticity of Lemma 4 is compared
-   with a central finite difference of the mean, and the CV of Lemma 5 with the
+1. Identities. On ``U(x) = x^4/4 - x^2/2``, the elasticity of Lemma 2 is compared
+   with a central finite difference of the mean, and the CV of Lemma 3 with the
    moments of an independent Markov-chain discretisation.
-2. Random potentials. Theorem 6 is evaluated on seeded random potentials
+2. Random potentials. Theorem 2 is evaluated on seeded random potentials
    ``U(x) = c x + sum_{k=1}^5 a_k sin(k f x)`` on ``[-2, 2]`` with random noise
    levels and starting points; the slack ``bound - s`` is reported.
 3. Stages. A metastable stage followed by an independent drift-diffusion stage
-   whose law does not depend on ``D``; Theorem 6 with ``+ log 2`` is evaluated.
+   whose law does not depend on ``D``; Theorem 2 with ``+ log 2`` is evaluated.
 4. Duality. For each mechanism and its escape-matched white twin across barrier
    heights: the per-trial divergence of the waiting times, the per-trial
    divergence of the transition-path durations, and the ratio of the former to
-   ``s e^{-s}`` with ``s`` the elasticity of the twin (Theorem 7).
+   ``s e^{-s}`` with ``s`` the elasticity of the twin (Theorem 3).
 """
 
 from __future__ import annotations

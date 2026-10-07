@@ -266,7 +266,7 @@ def binary_kl(p: float, q: float) -> float:
 
 
 def decomposition_at(A: TimingLaw, B: TimingLaw, t0: float) -> dict[str, float]:
-    """Chain-rule split of ``KL(P_A || P_B)`` at ``t0`` (Theorem 2, Eq. 2 of the article).
+    """Chain-rule split of ``KL(P_A || P_B)`` at ``t0`` (Theorem 1, Eq. 2 of the article).
 
     ``KL = kl(F_A(t0) || F_B(t0)) + F_A(t0) KL_early + S_A(t0) KL_late``.
     """

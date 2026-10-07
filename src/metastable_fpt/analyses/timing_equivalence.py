@@ -5,14 +5,14 @@ law of the discretised chain is compared with three white-noise models that shar
 its drift:
 
 * ``D_eff``: white noise at the mechanism's long-time (effective) diffusion;
-* ``D_esc``: white noise with the same escape rate ``lambda_1`` (Corollary 3);
+* ``D_esc``: white noise with the same escape rate ``lambda_1`` (Corollary 1);
 * ``D_mean``: white noise with the same mean commitment time.
 
 Reported per comparison: the per-trial Kullback-Leibler divergence (hazard form
 of Lemma 1, checked against the density form), its rate-only part, the
-chain-rule decomposition of Theorem 2 at the hazard-relaxation time with the
+chain-rule decomposition of Theorem 1 at the hazard-relaxation time with the
 late-part bound of Eq. (3), and the number of trials at which the summed error
-probabilities of any test can first fall below ``1 - eta`` (Corollary 3).
+probabilities of any test can first fall below ``1 - eta`` (Corollary 1).
 
 A second block evaluates the matched-control design: a candidate made of white
 noise plus OU and telegraph forcing, four controls with the same effective
