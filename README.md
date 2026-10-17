@@ -67,6 +67,7 @@ accumulator fits; the results do not depend on it.
 |---|---|---|
 | `timing_equivalence` | Divergence between commitment-time laws under effective-diffusion, escape-rate and mean matching; the matched-control design; spatial grid refinement | about 30 s |
 | `identities_duality` | Lemmas 2 and 3, Theorem 2 on random potentials and for two stages, waiting-time versus transition-path information | about 40 s |
+| `accuracy_checks` | Spatial, time-propagation and forcing-grid refinement at the smallest escape-matched divergences | about 10 s |
 | `human_waiting_times` | Waiting-time statistics, the Theorem 2 bound and accumulator fits for 17 participants | about 10 min |
 | `mc_effective_diffusion_controls` | Euler-Maruyama comparison of the candidate with controls matched in effective diffusion | about 2 min |
 | `mc_escape_matched_controls` | Euler-Maruyama comparison with escape-matched and mean-matched white controls at two time steps | about 7 min |
@@ -78,6 +79,7 @@ Run times were measured on a 28-thread workstation, with 20 processes for the ac
 | Article | Analysis | Entry in `results.json` |
 |---|---|---|
 | Sec. III, Fig. 1(a, b) | `timing_equivalence` | `summary_by_mechanism`, `rows` |
+| Sec. III (early-passage terms) | `timing_equivalence` | `rows[*].against.D_esc.decomposition` |
 | Sec. III (matched-control design), Fig. 1(c), bars | `timing_equivalence` | `matched_control_design` |
 | Fig. 1(c), crosses | `mc_effective_diffusion_controls` | `controls` |
 | Sec. III (Monte Carlo confirmation), Fig. 2, Sec. S2 | `mc_escape_matched_controls` | `by_time_step` |
@@ -86,6 +88,8 @@ Run times were measured on a 28-thread workstation, with 20 processes for the ac
 | Sec. VI, Fig. 4 | `human_waiting_times` | `subjects`, `group` |
 | Table S1 | `timing_equivalence`, `identities_duality`, `mc_escape_matched_controls` | `numerical_checks`; `identities`, `random_potentials`, `two_stage`; `positive_control` |
 | Table S2 | `timing_equivalence` | `grid_convergence` |
+| Table S3 | `accuracy_checks` | `spatial_refinement`, `time_refinement`, `forcing_grid_refinement` |
+| Table S4 | `human_waiting_times` | `subjects` |
 
 Lemma and theorem numbers in the code refer to the article: Lemma 1 (hazard
 identity), Theorem 1 (rate-transient decomposition), Corollary 1 (escape-rate
